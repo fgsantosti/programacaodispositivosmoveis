@@ -96,6 +96,8 @@ Editor de código (VS Code, Android Studio, etc.)
 Conhecimento básico de programação Dart
 
 🚀 Passo 1: Primeiro App - Olá Mundo Simples
+
+````dart
 main() => runApp( 
   Center( // O widget que alinha o conteúdo no centro
     child: Text( 
@@ -104,7 +106,7 @@ main() => runApp(
     ),
   ),
 );
-
+```
 
 Conceitos aprendidos:
 
@@ -117,6 +119,7 @@ Widget Text para exibir texto
 Propriedade textDirection obrigatória
 
 🎨 Passo 2: Estilizando o Texto
+````dart
 void main(){
   runApp(Center(
     child: Text(
@@ -132,6 +135,7 @@ void main(){
     ),
   )));
 }
+````
 
 
 Conceitos aprendidos:
@@ -143,6 +147,8 @@ Propriedades de cor, tamanho e peso da fonte
 Decorações de texto
 
 🏗️ Passo 3: Criando um Widget Personalizado (StatelessWidget)
+
+````
 void main(){
   runApp(Directionality(
     textDirection: TextDirection.ltr, 
@@ -150,6 +156,7 @@ void main(){
     )
   );
 }
+
 
 class WidgetSemEstado extends StatelessWidget {
   @override
@@ -168,7 +175,7 @@ class WidgetSemEstado extends StatelessWidget {
     ));
   }
 }
-
+````
 
 Conceitos aprendidos:
 
@@ -181,6 +188,7 @@ Método build() obrigatório
 Organização do código em classes
 
 📝 Passo 4: Widget com Parâmetros
+````dart
 void main(){
   runApp(Directionality(
     textDirection: TextDirection.ltr, 
@@ -210,7 +218,7 @@ class WidgetSemEstado extends StatelessWidget {
     ));
   }
 }
-
+````
 
 Conceitos aprendidos:
 
@@ -221,6 +229,7 @@ Construtor personalizado
 Propriedades final em widgets
 
 👆 Passo 5: Adicionando Interatividade com GestureDetector
+````dart
 void main(){
   runApp(Directionality(
     textDirection: TextDirection.ltr, 
@@ -250,7 +259,7 @@ class WidgetSemEstado extends StatelessWidget {
     );
   }
 }
-
+````
 
 Conceitos aprendidos:
 
@@ -263,6 +272,7 @@ BoxDecoration para estilização avançada
 Callback onTap para interações
 
 🔄 Passo 6: Widget com Estado (StatefulWidget)
+````dart
 void main(){
   runApp(Directionality(
     textDirection: TextDirection.ltr, 
@@ -305,7 +315,7 @@ class _ContadorState extends State<Contador>{
     );
   }
 }
-
+````
 
 Conceitos aprendidos:
 
@@ -329,14 +339,14 @@ Performance: Mais eficiente, pois não precisa ser reconstruído
 Uso: Para widgets que exibem informações estáticas
 
 Estrutura: Apenas o método build() é necessário
-
+````dart
 class MeuWidgetEstatico extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text('Conteúdo fixo');
   }
 }
-
+````
 StatefulWidget
 
 Mutável: Pode alterar seu estado durante o ciclo de vida
@@ -346,7 +356,7 @@ Performance: Menos eficiente, pois pode ser reconstruído várias vezes
 Uso: Para widgets que precisam responder a interações ou mudanças
 
 Estrutura: Requer duas classes - o widget e seu estado
-
+````dart
 class MeuWidgetDinamico extends StatefulWidget {
   @override
   State<MeuWidgetDinamico> createState() => _MeuWidgetDinamicoState();
@@ -360,6 +370,7 @@ class _MeuWidgetDinamicoState extends State<MeuWidgetDinamico> {
     return Text(texto);
   }
 }
+````
 
 📚 Próximos Passos
 
