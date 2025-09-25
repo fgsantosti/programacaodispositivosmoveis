@@ -83,19 +83,17 @@ Ao final da disciplina, os alunos deverão ser capazes de:
 
 **Carga Horária:** 80 horas (ou conforme regulamento do curso).  
 
-Introdução ao Flutter - Guia Passo a Passo
+# Introdução ao Flutter - Guia Passo a Passo
 
 Este guia apresenta os conceitos fundamentais do Flutter através de exemplos práticos, desde um simples "Olá, Mundo!" até widgets com estado.
 
-📋 Pré-requisitos
+## 📋 Pré-requisitos
 
-Flutter SDK instalado
+- Flutter SDK instalado
+- Editor de código (VS Code, Android Studio, etc.)
+- Conhecimento básico de programação Dart
 
-Editor de código (VS Code, Android Studio, etc.)
-
-Conhecimento básico de programação Dart
-
-🚀 Passo 1: Primeiro App - Olá Mundo Simples
+## 🚀 Passo 1: Primeiro App - Olá Mundo Simples
 
 ````dart
 main() => runApp( 
@@ -106,19 +104,20 @@ main() => runApp(
     ),
   ),
 );
-```
+````
 
-Conceitos aprendidos:
+## Conceitos aprendidos:
 
-Função main() como ponto de entrada
+- Função main() como ponto de entrada
 
-Widget Center para centralização
+- Widget Center para centralização
 
-Widget Text para exibir texto
+- Widget Text para exibir texto
 
-Propriedade textDirection obrigatória
+- Propriedade textDirection obrigatória
 
-🎨 Passo 2: Estilizando o Texto
+## 🎨 Passo 2: Estilizando o Texto
+
 ````dart
 void main(){
   runApp(Center(
@@ -138,15 +137,15 @@ void main(){
 ````
 
 
-Conceitos aprendidos:
+## Conceitos aprendidos:
 
-Widget TextStyle para estilização
+- Widget TextStyle para estilização
 
-Propriedades de cor, tamanho e peso da fonte
+- Propriedades de cor, tamanho e peso da fonte
 
-Decorações de texto
+- Decorações de texto
 
-🏗️ Passo 3: Criando um Widget Personalizado (StatelessWidget)
+## 🏗️ Passo 3: Criando um Widget Personalizado (StatelessWidget)
 
 ````
 void main(){
@@ -156,7 +155,6 @@ void main(){
     )
   );
 }
-
 
 class WidgetSemEstado extends StatelessWidget {
   @override
@@ -177,17 +175,17 @@ class WidgetSemEstado extends StatelessWidget {
 }
 ````
 
-Conceitos aprendidos:
+## Conceitos aprendidos:
 
-Widget Directionality para definir direção do texto
+- Widget Directionality para definir direção do texto
 
-Criação de widgets personalizados com StatelessWidget
+- Criação de widgets personalizados com StatelessWidget
 
-Método build() obrigatório
+- Método build() obrigatório
 
-Organização do código em classes
+- Organização do código em classes
 
-📝 Passo 4: Widget com Parâmetros
+## 📝 Passo 4: Widget com Parâmetros
 ````dart
 void main(){
   runApp(Directionality(
@@ -220,16 +218,17 @@ class WidgetSemEstado extends StatelessWidget {
 }
 ````
 
-Conceitos aprendidos:
+## Conceitos aprendidos:
 
-Passagem de parâmetros para widgets
+- Passagem de parâmetros para widgets
 
-Construtor personalizado
+- Construtor personalizado
 
-Propriedades final em widgets
+- Propriedades final em widgets
 
-👆 Passo 5: Adicionando Interatividade com GestureDetector
-````dart
+## 👆 Passo 5: Adicionando Interatividade com GestureDetector
+
+```dart
 void main(){
   runApp(Directionality(
     textDirection: TextDirection.ltr, 
@@ -261,18 +260,18 @@ class WidgetSemEstado extends StatelessWidget {
 }
 ````
 
-Conceitos aprendidos:
+## Conceitos aprendidos:
 
-Widget GestureDetector para capturar gestos
+- Widget GestureDetector para capturar gestos
 
-Widget Container para layout e decoração
+- Widget Container para layout e decoração
 
-BoxDecoration para estilização avançada
+- BoxDecoration para estilização avançada
 
-Callback onTap para interações
+- Callback onTap para interações
 
-🔄 Passo 6: Widget com Estado (StatefulWidget)
-````dart
+## 🔄 Passo 6: Widget com Estado (StatefulWidget)
+```dart
 void main(){
   runApp(Directionality(
     textDirection: TextDirection.ltr, 
@@ -317,28 +316,30 @@ class _ContadorState extends State<Contador>{
 }
 ````
 
-Conceitos aprendidos:
+## Conceitos aprendidos:
 
-StatefulWidget para widgets com estado mutável
+- StatefulWidget para widgets com estado mutável
 
-Método createState() obrigatório
+- Método createState() obrigatório
 
-Classe State separada para gerenciar o estado
+- Classe State separada para gerenciar o estado
 
-Método setState() para atualizar a interface
+- Método setState() para atualizar a interface
 
-Interpolação de strings com $
+- Interpolação de strings com $
 
-🔍 StatelessWidget vs StatefulWidget
-StatelessWidget
+# 🔍 StatelessWidget vs StatefulWidget
 
-Imutável: Não pode alterar seu estado após ser criado
+## StatelessWidget
 
-Performance: Mais eficiente, pois não precisa ser reconstruído
+- Imutável: Não pode alterar seu estado após ser criado
 
-Uso: Para widgets que exibem informações estáticas
+- Performance: Mais eficiente, pois não precisa ser reconstruído
 
-Estrutura: Apenas o método build() é necessário
+- Uso: Para widgets que exibem informações estáticas
+
+- Estrutura: Apenas o método build() é necessário
+
 ````dart
 class MeuWidgetEstatico extends StatelessWidget {
   @override
@@ -347,15 +348,17 @@ class MeuWidgetEstatico extends StatelessWidget {
   }
 }
 ````
-StatefulWidget
 
-Mutável: Pode alterar seu estado durante o ciclo de vida
+## StatefulWidget
 
-Performance: Menos eficiente, pois pode ser reconstruído várias vezes
+- Mutável: Pode alterar seu estado durante o ciclo de vida
 
-Uso: Para widgets que precisam responder a interações ou mudanças
+- Performance: Menos eficiente, pois pode ser reconstruído várias vezes
 
-Estrutura: Requer duas classes - o widget e seu estado
+- Uso: Para widgets que precisam responder a interações ou mudanças
+
+- Estrutura: Requer duas classes - o widget e seu estado
+
 ````dart
 class MeuWidgetDinamico extends StatefulWidget {
   @override
@@ -372,37 +375,37 @@ class _MeuWidgetDinamicoState extends State<MeuWidgetDinamico> {
 }
 ````
 
-📚 Próximos Passos
+# 📚 Próximos Passos
 
-Layouts: Aprenda sobre Row, Column, Stack
+### Layouts: Aprenda sobre Row, Column, Stack
 
-Navegação: Implemente navegação entre telas
+### Navegação: Implemente navegação entre telas
 
-Formulários: Crie formulários com validação
+### Formulários: Crie formulários com validação
 
-APIs: Integre com serviços web
+### APIs: Integre com serviços web
 
-Estado Global: Use Provider ou Bloc para gerenciamento de estado
+### Estado Global: Use Provider ou Bloc para gerenciamento de estado
 
-🛠️ Comandos Úteis
-# Criar novo projeto
+# 🛠️ Comandos Úteis
+### Criar novo projeto
 flutter create meu_app
 
-# Executar o app
+### Executar o app
 flutter run
 
-# Verificar dependências
+### Verificar dependências
 flutter doctor
 
-# Limpar build
+### Limpar build
 flutter clean
 
-📖 Recursos Adicionais
+# 📖 Recursos Adicionais
 
-Documentação Oficial do Flutter
+- Documentação Oficial do Flutter
 
-Dart Language Tour
+- Dart Language Tour
 
-Flutter Widget Catalog
+- Flutter Widget Catalog
 
 Dica: Pratique cada passo e experimente modificar os valores para entender melhor como cada widget funciona!
