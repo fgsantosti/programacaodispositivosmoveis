@@ -2,7 +2,7 @@
 
 ## 📁 Estrutura do Projeto
 
-````dart
+```dart
 lib/
 ├── db_helper/
 │   ├── database_conexao.dart    # Configuração e conexão com SQLite
@@ -15,24 +15,24 @@ lib/
 ├── services/
 │   └── usuario_service.dart     # Provider para gerenciamento de estado
 └── main.dart                    # Arquivo principal da aplicação
-````
+```
 
 ## 📦 Dependências (pubspec.yaml)
-````dart
+```dart
 dependencies:
   flutter:
     sdk: flutter
   sqflite: ^2.3.0      # Banco de dados SQLite local
   provider: ^6.1.1     # Gerenciamento de estado
   path: ^1.8.3         # Manipulação de caminhos de arquivo
-````
+```
 
 ##🔧 Arquivos do Projeto
 
 
 ### 1. main.dart
 
-````dart
+```dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'screens/listar_usuarios.dart';
@@ -60,11 +60,11 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-````
+```
 
 ### 2. model/usuario.dart
 
-````dart
+```dart
 /**
  * Modelo de dados do Usuário
  * 
@@ -119,11 +119,11 @@ class Usuario {
     return 'Usuario{id: $id, nome: $nome, email: $email, idade: $idade}';
   }
 }
-````
+```
 
 ### 3. db_helper/database_conexao.dart
 
-````dart
+```dart
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
@@ -199,11 +199,11 @@ class DatabaseConexao {
     }
   }
 }
-````
+```
 
 ### 4. db_helper/repositorio.dart
 
-````dart
+```dart
 import 'package:sqflite/sqflite.dart';
 import '../model/usuario.dart';
 import 'database_conexao.dart';
@@ -346,11 +346,11 @@ class Repositorio {
     }
   }
 }
-````
+```
 
 ### 5. services/usuario_service.dart
 
-````dart
+```dart
 import 'package:flutter/foundation.dart';
 import '../model/usuario.dart';
 import '../db_helper/repositorio.dart';
@@ -526,12 +526,12 @@ class UsuarioService extends ChangeNotifier {
     notifyListeners();
   }
 }
-````
+```
 
 
 ### 6. screens/listar_usuarios.dart
 
-````dart
+```dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../services/usuario_service.dart';
@@ -813,11 +813,11 @@ class _ListarUsuariosState extends State<ListarUsuarios> {
     );
   }
 }
-````
+```
 
 ### 7. screens/form_usuario.dart
 
-````dart
+```dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../services/usuario_service.dart';
@@ -1074,7 +1074,7 @@ class _FormUsuarioState extends State<FormUsuario> {
     }
   }
 }
-````
+```
 
 
 ## 🔍 Explicação dos Conceitos
